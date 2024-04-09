@@ -1,0 +1,19 @@
+<section>
+    <div class="w-full relative h-auto">
+        <div class="relative z-10 w-full bg-subscription">
+            <div class="xl:max-w-7xl mx-auto">
+                <div class="py-12 flex flex-col gap-[54px] px-4 text-white md:px-6 md:gap-12 lg:px-2 xl:gap-[54px] xl:py-20 2xl:px-0">
+                    <div class="text-heading-2 w-full text-center font-semibold uppercase">
+                        <span class="text-primary-1">6+</span> gói luyện tập không giới hạn
+                    </div>
+                    <div class="w-full flex flex-wrap items-center justify-center gap-6 xl:gap-[102px]">
+                        <app-subscript-card *ngFor="let card of cards" [card]="card" (scrollToRegister)="register()"></app-subscript-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute left-0 top-0 w-full h-full">
+            <img src="/assets/img/home/blue_gym.png" alt="Background2" class="w-full h-full object-cover object-center">
+        </div>
+    </div>
+</section>

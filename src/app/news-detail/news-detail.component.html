@@ -1,0 +1,41 @@
+<main>
+    <!-- subheader -->
+    <app-sub-header [isHasContent]="false" page="news"></app-sub-header>
+
+    <article>
+        <div class="w-full relative h-auto text-neutral-1-900">
+            <div class="mx-auto xl:max-w-7xl">
+                <div class="w-full flex flex-col gap-12 px-4 py-12 md:px-6 lg:px-2 xl:flex-row xl:py-[100px] xl:justify-between 2xl:px-0">
+                    <section>
+                        <div class="w-full flex flex-col gap-12 xl:max-w-[845px]">
+                            <!-- bai viet -->
+                            <section>
+                                <div class="flex flex-col gap-8 text-body-1 xl:gap-[50px]">
+                                    <!-- tiêu đề blog -->
+                                    <app-news-detail-heading></app-news-detail-heading>
+                                    <app-news-detail-content></app-news-detail-content>
+                                </div>
+                            </section>
+                            <!-- tin tuc lien quan -->
+                            <app-news-detail-related-news></app-news-detail-related-news>
+                            <!-- share -->
+                            <app-news-detail-share-bar></app-news-detail-share-bar>
+                            <!-- comment -->
+                            <app-comment-box></app-comment-box>
+                        </div>
+                    </section>
+                    <aside>
+                        <div class="w-full flex flex-col gap-8 md:gap-12 xl:gap-8 xl:max-w-[387px] xl:sticky xl:top-[86px]">
+                            <!-- search bar -->
+                            <app-news-detail-search-box></app-news-detail-search-box>
+                            <!-- list blog liên quan -->
+                            <app-other-news></app-other-news>
+                            <!-- danh mục -->
+                            <app-directory></app-directory>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>

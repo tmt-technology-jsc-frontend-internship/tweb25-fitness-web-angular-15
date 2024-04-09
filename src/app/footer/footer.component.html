@@ -1,0 +1,30 @@
+<footer>
+<div class="w-full relative h-auto">
+    <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig"
+    class="slider-footer max-w-[1920px] mx-auto overflow-x-hidden flex flex-nowrap">
+        <div ngxSlickItem *ngFor="let slide of slides" class=" max-h-[138px] md:max-h-[166.8px] xl:max-h-60 aspect-square"><img src="{{slide.img}}" alt="Image" class="h-full object-cover object-center"></div>
+    </ngx-slick-carousel>
+</div>
+<div class="w-full relative h-auto bg-secondary-1">
+    <div class="xl:max-w-7xl mx-auto">
+        <div class="py-12 px-4 flex flex-col gap-14 items-center text-white font-normal md:px-6 lg:px-2 2xl:px-0">
+            <div class="w-full flex flex-col gap-8 items-start lg:justify-between lg:grid lg:grid-cols-3">
+                <div class="w-[239px] h-[68px]"><a href="./index.html"><img src="/assets/img/header-footer/logo-white.png" alt="" class="w-full h-full object-contain"></a></div>
+                <div class="w-full flex flex-col gap-16 md:flex-row md:gap-[50px] md:items-start md:justify-between lg:col-span-2">
+                    <div class="text-body-1 font-normal flex flex-col gap-4">
+                        <div class="uppercase text-header-1 font-semibold w-full pb-2">công ty tnhh seventh fitness</div>
+                        <div *ngFor="let info of infos" class="flex items-center gap-4"><span class="text-primary-1 w-6 h-6 text-2xl leading-6" [class]="info.iconClass"></span><span>{{info.text}}</span></div>
+                    </div>
+                    <div class="w-full flex flex-col gap-6 md:max-w-[368px]">
+                        <div class="uppercase text-header-1 font-semibold w-full text-left">fanpage facebook</div>
+                        <div class="w-full aspect-fanpage relative">
+                            <img src="/assets/img/header-footer/fanpage.png" alt="Fanpage" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full pt-8 border-t border-white/30"><div class="text-body-1 w-full text-center">Copyright 2022 SEVENTH FITNESS. All rights reserved.</div></div>
+        </div>
+    </div>
+</div>
+</footer>

@@ -1,0 +1,18 @@
+<section>
+    <div class="w-full relative">
+        <div class="xl:max-w-7xl mx-auto">
+            <div class="py-12 px-4 flex flex-col gap-12 items-center md:px-6 lg:px-2 xl:py-20 2xl:px-0">
+                <!-- search bar -->
+                <app-multi-select-box class="w-full" [selects]="selects"></app-multi-select-box>
+
+                <!-- schedule list -->
+                <div class="w-full text-secondary-1 grid grid-cols-1 gap-y-6 gap-x-8 md:grid-cols-2 xl:gap-x-6">
+                    <app-job-card *ngFor="let job of jobs" [job]="job"></app-job-card>
+                </div>
+                
+                <!-- pagination -->
+                <app-pagination *ngIf="isPagination" [pages]="pages" [noParam]="isActivateNoParam" pageRoot="recruit"></app-pagination>
+            </div>
+        </div>
+    </div>
+</section>

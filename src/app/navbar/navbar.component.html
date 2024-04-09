@@ -1,0 +1,46 @@
+<header>
+    <div class="w-full bg-white fixed top-0 z-50">
+        <div class="relative mx-auto md:max-w-7xl">
+            <div class="py-2 px-4 w-full md:px-6 lg:px-2 xl:py-4 2xl:px-0">
+                <nav class="flex items-center justify-between w-full h-full text-header-2 text-secondary-1 font-medium">
+                    <div class="logo w-[154px] h-full xl:w-[189px]">
+                        <div class="relative w-full h-11 xl:h-[54px]">
+                            <a href="./home"><img src="/assets/img/header-footer/logo-black.png" alt="Logo"
+                                    class="w-full h-full object-contain"></a>
+                        </div>
+                    </div>
+                    <ul [ngClass]="isOpenMenuChange"
+                        class="flex-col absolute w-full bg-white left-0 top-0 opacity-100 z-50 min-h-screen px-4 xl:flex xl:flex-row xl:static xl:w-full xl:gap-8 xl:items-center xl:justify-end xl:min-h-fit xl:p-0">
+                        <div class="w-full flex justify-end px-4 pb-6 pt-4 xl:hidden">
+                            <div class="close-btn twi-25-close-fill text-2xl text-neutral-1-500 cursor-pointer" (click)="toggleMenu(false)"></div>
+                        </div>
+                        <li *ngFor="let page of pages" >
+                            <div class="py-2 px-3 flex items-center justify-center">
+                                <a  [routerLink]="page.link"
+                                    routerLinkActive="xl:text-primary-1"
+                                    ariaCurrentWhenActive="page"
+                                    class="w-full h-full hover:text-primary-1 transition-all ease-out duration-300">
+                                    {{page.name}}
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="py-2 px-3 xl:p-0">
+                                <div (click)="togglePopup()"
+                                    class="register-trail py-[9px] px-[17px] w-fit h-full primary-button cursor-pointer group shadow-white">
+                                    Đăng ký tập thử
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                    <button type="button" class="twi-25-menu-fill relative z-20 cursor-pointer 
+                        text-neutral-1-900 rounded-lg w-auto h-auto text-2xl 
+                        flex items-center justify-center xl:hidden" (click)="toggleMenu(true)">
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <app-popup-register></app-popup-register>
+</header>

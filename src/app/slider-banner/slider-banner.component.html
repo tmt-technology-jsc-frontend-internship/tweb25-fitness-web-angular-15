@@ -1,0 +1,14 @@
+<div class="w-full">
+    <div class="relative max-w-[1920px] mx-auto mt-[60px] xl:mt-[86px]">
+        <ngx-slick-carousel class="banner-slider w-full relative"
+        #slickModal="slick-carousel"
+        [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide relative w-full h-auto overflow-x-hidden">
+                <div class="aspect-home-banner w-full h-full min-h-[357px]">
+                    <img src="{{ slide.img }}"
+                    alt="Banner" loading="lazy" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<section>
+    <div class="w-full relative">
+        <div class="xl:max-w-7xl mx-auto">
+            <div class="py-12 px-4 flex flex-col gap-12 items-center md:px-6 lg:px-2 xl:py-20 2xl:px-0">
+                <!-- search bar -->
+                <app-multi-select-box class="w-full" [selects]="selects"></app-multi-select-box>
+                <!-- schedule list -->
+                <div class="w-full grid grid-cols-1 gap-y-6 gap-x-8 md:grid-cols-2 xl:grid-cols-3">
+                    <div *ngFor="let schedule of schedules" class="w-full aspect-schedule"><a href="{{schedule.link}}"><img src="{{schedule.img}}" alt="Schedule" class="w-full h-full bg-cover"></a></div>
+                </div>
+                <!-- pagination -->
+                <app-pagination *ngIf="isPagination" [pages]="pages" [noParam]="isActivateNoParam" pageRoot="schedule"></app-pagination>
+            </div>
+        </div>
+    </div>
+</section>

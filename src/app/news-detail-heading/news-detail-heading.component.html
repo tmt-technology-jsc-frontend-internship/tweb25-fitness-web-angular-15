@@ -1,0 +1,13 @@
+<div class="w-full flex flex-col gap-4">
+    <div>
+        <div class="text-body-1 text-neutral-1-700 flex gap-1"><span>Tin tức</span> - <span>Blog</span></div>
+        <div class="w-full text-heading-2 font-semibold uppercase mt-2">thực đơn cho người mới tập gym có nên sử dụng nhiều trứng?</div>
+    </div>
+    <div class="flex gap-6 text-neutral-1-700">
+        <app-news-xtra-info *ngFor="let info of newsXtraInfos" [iconClass]="info.icon" [content]="info.content"></app-news-xtra-info>
+    </div>
+    <div class="flex gap-2 items-center text-white">
+        <app-news-like-share *ngFor="let a of newsLikeShares" [hasIcon]="a.isIcon" [iconClass]="a.icon" [content]="a.content"></app-news-like-share>
+        <div class="text-body-2 flex-1 text-neutral-1-700">Hãy là người đầu tiên trong số bạn bè của bạn thích nội dung này.</div>
+    </div>
+</div>

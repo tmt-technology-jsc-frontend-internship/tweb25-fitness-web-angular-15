@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+
+@import 'src/assets/fonts/Saira SemiCondensed/style.css';
+@import 'src/assets/fonts/font-icon/style.css';
+@import '../node_modules/slick-carousel/slick/slick.css';
+@import '../node_modules/slick-carousel/slick/slick-theme.css';
+
+body{
+    @apply w-screen h-full overflow-x-hidden font-Saira-SemiCondensed relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer{
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider-pt{
+    .slick-track{
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    *{
+        vertical-align: bottom;
+    }
+
+    @media screen and (min-width: 834px) {
+        .slick-track{
+            justify-content: unset;
+            gap: 32px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .slick-track{
+            gap: 24px;
+        }
+
+    }
+}
+
+.slider-footer{
+    *{
+        vertical-align: bottom;
+    }
+
+}
+
+.primary-button{
+    @apply bg-primary-1 shadow-[0_0_0_1px_#fff] shadow-primary-1 text-white
+    focus:shadow-primary-1 focus:bg-white focus:text-primary-1 
+    hover:shadow-primary-1 hover:bg-white hover:text-primary-1 
+    transition-all duration-300 ease-out;
+}
+

@@ -1,0 +1,15 @@
+<section>
+    <div class="w-full relative h-auto">
+        <div class="xl:max-w-7xl mx-auto">
+            <div class="py-12 px-4 flex flex-col gap-12 items-center text-secondary-1 md:px-6 lg:px-2 xl:py-20 2xl:px-0">
+                <div *ngIf="isHasHeader" class="w-full flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="text-heading-2 font-semibold w-full uppercase">tin tức và sự kiện</div>
+                    <div class="text-body-1 text-neutral-1-700 font-normal w-full max-w-[628px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sollicitudin lobortis elit nunc. Sed pharetra mattis ipsum tincidunt. Vehicula enim, at dui aliquam pulvinar.</div>
+                </div>
+                <div class="w-full grid grid-cols-1" [class]="styleBoundary">
+                    <app-news-card *ngFor="let card of cards" [card]="card"></app-news-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

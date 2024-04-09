@@ -1,0 +1,24 @@
+<section>
+    <div class="w-full relative h-auto">
+        <div class="relative z-20 w-full bg-quot">
+            <div class="xl:max-w-7xl mx-auto">
+                <div class="py-12 flex text-white xl:py-20">
+                    <div class="relative w-full">
+                        <ngx-slick-carousel class="slider-quot text-white" #slickModal="slick-carousel" [config]="slideConfig">
+                            <li ngxSlickItem *ngFor="let slide of slides">
+                                <div class="w-full flex flex-col items-center px-4 md:px-8">
+                                    <div class="text-[100px] font-semibold leading-[114px]">“</div>
+                                    <div class="text-body-1 font-normal text-center mt-2 mb-14 xl:w-[846px]">{{slide.quot}}</div>
+                                    <img src="{{slide.img}}" alt="PT" class="w-14 h-14 object-cover object-center rounded-full">
+                                </div>
+                            </li>
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute left-0 top-0 w-full h-full">
+            <img src="/assets/img/home/pt_5.png" alt="Background3" class="w-full h-full object-cover object-center">
+        </div>
+    </div>
+</section>

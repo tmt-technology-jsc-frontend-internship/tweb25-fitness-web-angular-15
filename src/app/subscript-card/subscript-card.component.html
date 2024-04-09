@@ -1,0 +1,9 @@
+<div class="flex flex-col gap-8 py-8 group hover:bg-primary-1 transition-all duration-300 ease-out">
+    <div class="font-semibold text-center">
+        <div class="text-heading-4 mb-4">{{card.month}} Tháng</div>
+        <div class="text-heading-2 text-primary-1 group-hover:text-white transition-all ease-out duration-300">{{card.total | number}} VNĐ</div>
+        <div class="text-body-1 opacity-40 font-normal">{{card.perMonth | number}} VNĐ / 1 tháng</div>
+    </div>
+    <div class="text-body-1 font-normal text-center max-w-[286px]">{{card.describe}}</div>
+    <div class="text-center w-full"><button (click)="register()" type="button" class="register-trail bg-primary-1 py-[9px] px-[17px] w-[152px] text-header-2 group-hover:shadow-[0_0_0_1px_#ffffff] font-medium transition-all ease-out duration-300">Đăng ký</button></div>
+</div>

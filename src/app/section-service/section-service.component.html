@@ -1,0 +1,32 @@
+<section>
+    <div class="w-full relative h-auto">
+        <div class="relative z-10 w-full bg-white/95">
+            <div class="xl:max-w-7xl mx-auto">
+                <div class="py-12 px-4 flex flex-col gap-12 md:px-6 lg:px-2 2xl:px-0 xl:py-20">
+                    <div *ngIf="isHasHeader" class="w-full flex flex-col items-center justify-center gap-4 text-center">
+                        <div class="text-heading-2 font-semibold w-full uppercase">CÁC DỊCH VỤ TẠI <span class="text-primary-1">SEVENTH FITNESS</span></div>
+                        <div class="text-body-1 text-neutral-1-700 font-normal w-full md:w-[628px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sollicitudin lobortis elit nunc. Sed pharetra mattis ipsum tincidunt. Vehicula enim, at dui aliquam pulvinar.</div>
+                    </div>
+                    <div class="w-full px-0.5 md:px-0">
+                        <div class="w-full grid grid-cols-1 gap-6 text-white font-semibold text-heading-2 md:grid-cols-2 md:gap-x-8 xl:gap-6 xl:grid-cols-3">
+                            <div *ngFor="let service of services" class="relative aspect-img-service">
+                                <a href="{{service.link}}">
+                                    <div class="relative z-10 w-full h-full bg-black/40 flex flex-col items-center justify-center gap-2">
+                                        <div class="uppercase">{{service.type}}</div>
+                                        <div class="w-12 h-1 bg-primary-1"></div>
+                                    </div>
+                                    <div class="absolute inset-0">
+                                        <img src="{{service.srcImg}}" alt="{{service.altImg}}" class="object-cover object-center h-full w-full">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute left-0 top-0 w-full h-full">
+            <img src="/assets/img/home/black_white_gym.png" alt="Background1" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
